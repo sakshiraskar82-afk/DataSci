@@ -1,4 +1,4 @@
-name: CI
+name: First GitHub Workflow
 
 on:
   workflow_dispatch:
