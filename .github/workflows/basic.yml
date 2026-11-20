@@ -1,0 +1,33 @@
+
+name: Basic Workflow
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  basic-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Show Date
+        run: date
+
+      - name: Create Text File
+        run: |
+          echo "Hello GitHub Actions" > demo.txt
+          cat demo.txt
+
+      - name: Run Python Program
+        run: |
+          echo 'print("Hello from Python")' > hello.py
+          python hello.py
